@@ -1,5 +1,5 @@
 
-:root{
+:root {
   --primary: #013864;
   --secondary: #1B4D99;
   --tertiary: #85A4C9;
@@ -7,72 +7,40 @@
   --fift: #C4A668;
   --sixth: #EEEFF3;
 }
-
-body{
+* {
+  box-sizing: border-box;
+}
+body {
   background: #EEEFF3;
   font-family: 'Gabarito', cursive;
-}
-
-header {
-  background-image: url("../drawable/WhatsApp\ Image\ 2023-10-01\ at\ 23.10.53.jpeg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  display: inherit;
-  height: 100vh;
-  position: relative;
-  z-index: 100;
-}
-
-p{
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-.webpage_title
-{
-  color: #EEEFF3;
-  margin: 0 auto;
-}
-
-
-.topMenuHeader{background-color: rgba(1, 65, 161, 0.377);
-  display: flex;
+  align-items: center;
   justify-content: center;
-  
+  min-height: 100vh;
+  margin: 0;
 }
 
-.topMenuHeader * {
-  opacity: 1;
-}
-.topMenuHeader h1{
-  padding: 20px
-}
-
-.logoAndTittle {
+/* Estilos de la barra de navegación */
+.navito {
+  background-color: #013864;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 80%;
 }
 
-.welcome h1{
-  margin: 150px auto;
-}
-
-.mainLogo{
-  height: 100px;
-  border-radius: 100%;
-}
-
-.topNavBar {
-  display: flex;
-  justify-content: space-between;
+.navito ul {
   list-style: none;
-  overflow: hidden; 
-  
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-.topNavBar a{
+.navito li {
+  margin-right: 20px;
+}
+
+.navito a {
+  font-size: 20px;
   display: block;
   color: white;
   text-align: center;
@@ -80,67 +48,115 @@ p{
   text-decoration: none;
 }
 
-.welcome{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  font-size: larger;
-  color: white;
+.navito a:hover {
+  background-color: #85A4C9;
+  color: black;
 }
 
+/* Estilos del título de la página */
+.welcome {
+  background-image: url("../drawable/WhatsApp Image 2023-10-01 at 23.10.53.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Añadido para centrar verticalmente */
+  position: relative;
+  z-index: 100;
+  font-size: 40px;
+}
+
+.welcome h1 {
+  color: #EEEFF3;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.mainLogo {
+  margin: 0 auto;
+  height: 30%;
+  width: 14.5%;
+  border-radius: 100%;
+  max-width: 100%; /* Añadido para asegurar que la imagen no desborde su contenedor */
+}
+
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 600px) {
+  .navito ul {
+      flex-direction: column;
+  }
+
+  .navito li {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+  }
+
+  .navito a {
+      padding: 10px;
+  }
+}
 nav ul li {
   float: left;
-  font-size: px;
+  font-size: 15px;
 }
+
 nav ul li a {
   display: block;
-  padding: 10px;
+  padding: 5px;
   color: white;
   text-decoration: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   display: block;
   transform: scale(1.1);
   text-decoration: none;
 }
 
-li button{
+li button {
   font-family: 'Gabarito', cursive;
   font-size: larger;
   background-color: transparent;
   border: transparent;
 }
 
-li button:hover{
+li button:hover {
   background: #013864;
 }
 
-
-.welcome{
+.welcome {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-.aboutUs{
+
+.aboutUs {
   background-color: #013864;
   color: #EEEFF3;
   text-align: center;
   margin: 0 auto;
+  justify-content: center;
 }
 
-.aboutUs h1{
+.aboutUs h1 {
   margin-top: 30px;
 }
 
-.aboutUs p{
+.aboutUs p {
   max-width: 100%;
   margin: 0 auto;
 }
+button[id]{
+  margin-top: 10px;
+}
 
-.borderTest{
+.borderTest {
   padding: 20px;
   margin: 0 auto;
   width: 60%;
@@ -150,36 +166,32 @@ li button:hover{
 
 .misionVision {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   gap: 0px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .misionVision div {
   flex: 1;
   text-align: center;
-  max-width: calc(30% + 200px); 
+  max-width: calc(30% + 200px);
   margin: 10px;
   padding: 30px;
 }
-
 
 .misionVision div lord-icon {
   scale: 0.8;
   width: 100%;
   height: auto;
   margin-top: -20px;
-  max-width: 200px; 
-  max-height: 200px; 
+  max-width: 200px;
+  max-height: 200px;
 }
-
 
 .misionVision div h2,
 .misionVision div p {
   text-align: center;
 }
-
-
 
 .catalogSection {
   background-size: cover;
@@ -193,7 +205,6 @@ li button:hover{
   position: relative;
   z-index: 100;
   justify-content: center;
-  padding: 20px;
 }
 
 .catalogImages {
@@ -211,15 +222,14 @@ li button:hover{
 }
 
 .catalogImages img:hover {
-  transform: scale(1.18);
+  transform: scale(1.1);
 }
 
-hr{
+hr {
   border: 1px solid #013864;
   width: 50%;
   margin: 0 auto;
 }
-
 
 .categories {
   text-align: center;
@@ -243,59 +253,59 @@ hr{
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  height: 90%; 
+  height: 90%;
+  transition: transform 0.5s;
 }
 
+.card:hover{
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  height: 90%;
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
 .card img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto 10px;
   border-radius: 5px;
-  width: 75%; 
-  height: 75%; 
+  width: 75%;
+  height: 75%;
 }
 
-.oval {
+.categories button{
+  font-family: 'Gabarito', cursive;
+  border: transparent;
+  font-size:  20px;
   background-color: #85A4C9;
   color: #fff;
   border-radius: 50px;
   padding: 10px;
   gap: 30px;
-  width: auto; 
-  height: auto; 
+  width: auto;
+  height: auto;
   margin: 0 auto;
   transition: transform 0.5s;
-  
   display: flex;
   align-items: center;
-  
   justify-content: center;
 }
 
-.oval:hover {
-  background-color: #1B4D99;
-  transform: scale(1.1);
-  transition: transform 0.5s;
-  color: #fff;
-  border-radius: 50px;
-  padding: 10px;
-  gap: 30px;
-  width: auto; 
-  height: auto; 
-  margin: 0 auto;
-  
-  display: flex;
-  align-items: center;
-  
-  justify-content: center;
+
+/* Media Query para 2 cards por fila en pantallas pequeñas */
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 
 h2 {
   margin: 0;
   font-size: 18px;
 }
-
 
 .locationAndInfoSection {
   text-align: center;
@@ -305,37 +315,34 @@ h2 {
 h1 {
   margin-top: 0;
 }
-.locationAndInfoSection{
+
+.locationAndInfoSection {
   color: #013864;
 }
 
-.locationAndInfoSection h1{
+.locationAndInfoSection h1 {
   padding: 30px;
 }
 
-.phisicalStore {
+.physicalStore {
   display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
   justify-content: space-between;
 }
 
-.schedule, .location {
-  width: 48%;
+.schedule,
+.location {
+  width: 48%; /* Divide en dos columnas iguales */
   text-align: left;
+  padding: 10px; /* Agrega espaciado entre los elementos */
+  box-sizing: border-box; /* Incluye el relleno en el ancho */
 }
 
 .schedule {
-  margin-right: 2%;
   text-align: center;
 }
 
 .location {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.location-info {
-  flex: 1;
   text-align: center;
 }
 
@@ -347,51 +354,42 @@ h1 {
 }
 
 iframe {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 400px; /* Ajusta la altura máxima para que sea responsivo */
   border-radius: 10px;
-  border: #013864;
+  border: 1px solid #013864; /* Corrige la propiedad 'border' */
 }
 
 
-.contactUs {
-  background-color: #013864;
-  color: #EEEFF3;
+#contactUs {
+  padding: 20px;
+  background-color: #013864; /* Color de fondo original */
+  color: #EEEFF3; /* Color de texto original */
   text-align: center;
   background-size: cover;
   background-position: center;
-  width: 100%;
+
   display: inherit;
   height: 80vh;
   position: relative;
   z-index: 100;
 }
 
-.contactUs h1{
+#formulario {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px; /* Radio del borde */
+  text-align: center; /* Centra el botón */
+}
+
+h1 {
   padding: 60px;
 }
 
-.contactUs button{
-  border: transparent;
-  width: 200px;
-  height: 40px;
-  border-radius: 20px;
-  transition: transform 0.5s;
-}
-
-.contactUs button:hover{
-  background-color: #85A4C9;
-  color: #013864;
-  transform: scale(1.1);
-}
-
-.contactUs input{
-  border-radius: 20px;
-  border: transparent;
-}
-
 .contactContainer {
-  margin: 0 auto; /* Add this line */
+  background-color: #013864; /* Color de fondo original */
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   width: 65%;
@@ -399,32 +397,64 @@ iframe {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin-top: -60px;
 }
-.mssg{
-  margin-bottom: 30px;
-  margin-inline: 40px;
-}
-.nne-mail{
-  margin-bottom: 30px;
-  margin-inline: 40px; 
-}
 
-.contaicner{
+.columns {
   display: flex;
-  justify-content: center;
+  flex-direction: row; /* Cambia la dirección a horizontal */
+  flex-wrap: wrap; /* Permite el ajuste en pantallas pequeñas */
+  justify-content: space-between; /* Distribuye las columnas de manera uniforme */
+}
+
+.column {
+  flex-basis: calc(50% - 10px); /* Divide en dos columnas con espacio entre ellas */
+  margin: 5px; /* Espacio entre las columnas */
+}
+
+p {
+  margin: 0;
+  font-weight: bold; /* Texto en negrita */
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px; /* Aumenta el relleno */
+  margin: 5px 0;
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 20px; /* Radio del borde original */
+}
+
+.messageInput {
+  width: 100%; /* Aumenta el ancho del cuarto input */
+  height: 100px;
+}
+
+.send {
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  width: auto; /* Ajusta al tamaño del texto dentro del botón */
+  background-color: #1B4D99; /* Color de fondo original del botón */
+  color: #EEEFF3; /* Color del texto original del botón */
+  border: transparent; /* Borde transparente */
+  border-radius: 20px; /* Radio del borde original */
+  padding: 10px; /* Aumenta el relleno del botón */
+  cursor: pointer;
+  margin: 0 auto; /* Centra el botón */
 }
 
-.messageInput{
-  height: 200px;
-  width: 300px;
-}
-input{
-  height: 20px;
-  width: 300px;
+button:hover {
+  background-color: #85A4C9;
+  color: #013864;
+  transform: scale(1.1);
 }
 
-
+@media (max-width: 767px) {
+  .columns {
+      flex-direction: column; /* Cambia la dirección a vertical en pantallas pequeñas */
+  }
+  .column {
+      flex-basis: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  }
+}
 footer {
   background-color: #85A4C9;
   justify-content: center;
@@ -434,7 +464,7 @@ footer {
   padding: 40px;
 }
 
-footer button{
+footer button {
   background-color: #EEEFF3;
   color: black;
   font-family: 'Gabarito', cursive;
@@ -443,23 +473,22 @@ footer button{
   width: 300px;
   margin: 0 auto;
   border-radius: 100px;
-  transition: transform 0.5s;  
+  transition: transform 0.5s;
 }
 
-footer button:hover{
+footer button:hover {
   transform: scale(1.1);
   background-color: #F6DA82;
 }
 
-.socialMedia{
+.socialMedia {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 20px;
   padding: 20px;
-  
 }
 
-.socialMedia h2{
+.socialMedia h2 {
   color: white;
   font-size: 20px;
   margin: auto;
@@ -480,6 +509,3 @@ svg {
   fill: var(--primary);
 }
 
-svg:hover {
-  transform: rotate(360deg);
-}
